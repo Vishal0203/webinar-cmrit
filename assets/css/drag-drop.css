@@ -1,0 +1,41 @@
+.container {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-container {
+  width: 400px;
+  border-radius: 0.5rem;
+  position: relative;
+  border: 2px solid goldenrod;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+}
+
+.box-container .box {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  background-color: lightgray;
+  border-radius: 0.2rem;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+  margin: 0;
+}
