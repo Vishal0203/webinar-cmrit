@@ -5,9 +5,11 @@ const db = require('../utilities/db');
 const User = db.User;
 
 // routes
+router.get('/signin', renderSignin);
 router.post('/signup', create);
 router.post('/signin', signIn);
 
+// constroller functions
 async function authenticate(username, password) {
   const user = await User.findOne({ username });
 
@@ -42,6 +44,10 @@ async function signIn(req, res) {
   } else {
     res.redirect('/users/signin');
   }
+}
+
+function renderSignin(req, res) {
+  res.render('signin');
 }
 
 module.exports = router;
