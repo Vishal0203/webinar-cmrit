@@ -6,7 +6,10 @@ const connectionOptions = {
   useFindAndModify: false
 };
 
-mongoose.connect('mongodb://localhost:27017/expressapp', connectionOptions);
+mongoose.connect(
+  `mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:27017/expressapp?authSource=expressapp`,
+  connectionOptions
+);
 
 module.exports = {
   User: require('../models/user.model'),

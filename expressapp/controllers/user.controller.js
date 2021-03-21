@@ -6,6 +6,7 @@ const User = db.User;
 
 // routes
 router.get('/signin', renderSignin);
+router.get('/signup', renderSignup);
 router.post('/signup', create);
 router.post('/signin', signIn);
 
@@ -30,7 +31,7 @@ async function create(req, res) {
   }
 
   await user.save();
-  res.status(200).send(user);
+  signIn(req, res);
 }
 
 async function signIn(req, res) {
@@ -48,6 +49,10 @@ async function signIn(req, res) {
 
 function renderSignin(req, res) {
   res.render('signin');
+}
+
+function renderSignup(req, res) {
+  res.render('signup');
 }
 
 module.exports = router;

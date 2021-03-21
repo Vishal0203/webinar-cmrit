@@ -7,5 +7,7 @@ block content
       form.sign-in-form(method="POST")
         input(name="username", type="text", placeholder="Enter username")
         input(name="password", type="password", placeholder="Enter password")
-        input(type="submit" value="Sign in")
-        a(href="/users/signup") or, Sign up here!
+        input(name="firstName", type="text", placeholder="Enter first name")
+        input(name="lastName", type="text", placeholder="Enter last name")
+        input(type="submit" value="Sign up")
+        a(href="/users/signin") or, Sign in here!
