@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400&display=swap');
 
+.font-15 {
+  font-size: 1.5rem;
+}
+
 .container {
   display: flex;
   align-items: center;

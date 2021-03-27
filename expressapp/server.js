@@ -10,7 +10,8 @@ const PORT = 3000;
 app.use(session({
   resave: false,
   saveUninitialized: false,
-  secret: 'shhhh, very secret'
+  secret: 'shhhh, very secret',
+  expires: Date.now() + (30 * 86400 * 1000)
 }));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,6 +36,7 @@ app.get('/signout', middlewares.restrict, (req, res) => {
 
 // routes to controller
 app.use('/users', middlewares.isAuthenticated, require('./controllers/user.controller'));
+app.use('/api', middlewares.restrict, require('./controllers/api.controller'));
 
 // server start
 app.listen(PORT, () => {

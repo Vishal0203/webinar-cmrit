@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= `Hello, ${username}!`
+  div
+    input(name="newFruit")
+    button#add-new-fruit Submit
+  ul#fruit-list
   a(href="/signout") Sign out
+
+block scripts
+  script(src="/assets/js/home.js")
