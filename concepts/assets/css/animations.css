@@ -89,6 +89,7 @@
   justify-content: center;
   flex-direction: column;
   font-size: 10rem;
+  background-color: goldenrod;
 }
 
 html {
